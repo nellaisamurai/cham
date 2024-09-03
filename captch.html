@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPTCHA Verification</title>
+    <!-- Include Google reCAPTCHA script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        function onSubmit(token) {
+            // Redirect to the real page after successful CAPTCHA verification
+            window.location.href = "weblogin.html";
+        }
+    </script>
+</head>
+<body>
+    <h2>Please complete the CAPTCHA to continue</h2>
+    <!-- Google reCAPTCHA form -->
+    <form action="?" method="POST">
+        <button class="g-recaptcha" 
+                data-sitekey="6LclTzUqAAAAAP8aNVFVpBdl3sgkVW0YynDFY3p9" 
+                data-callback="onSubmit" 
+                data-action="submit">
+            Verify
+        </button>
+    </form>
+</body>
+</html>
